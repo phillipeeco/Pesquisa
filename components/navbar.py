@@ -11,7 +11,7 @@ def Navbar():
             children=[
                 dbc.NavItem(dbc.NavLink("Gênero", href="/genero", active="exact")),
                 dbc.NavItem(dbc.NavLink("Área", href="/area", active="exact")),
-                dbc.NavItem(dbc.NavLink("Personalizado", href="/personalizado", active="exact")),
+                dbc.NavItem(dbc.NavLink("Questões", href="/questoes", active="exact")),
             ] ,
             brand="PLANDESPP",
             brand_href="/genero",

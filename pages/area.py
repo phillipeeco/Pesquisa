@@ -13,7 +13,7 @@ layout = dbc.Container([
     # Título --------------------------
     dbc.Row([
             dbc.Col([
-                html.H3('Análise das Pesquisas Realizadas',
+                html.H3('Análise por Área',
                         style={'text-align': 'center'})
             ]),
             ]),
