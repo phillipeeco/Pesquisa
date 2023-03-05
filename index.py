@@ -1,11 +1,15 @@
 from dash import html, dcc
 from dash.dependencies import Input, Output
 from app import app
-from pages import page1, page2
+from pages import area, genero
+from callbacks import cb_genero, cb_area
 from components import navbar
 
 
 nav = navbar.Navbar()
+
+cb_genero.callback_genero(app)
+cb_area.callback_area(app)
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
@@ -13,13 +17,14 @@ app.layout = html.Div([
     html.Div(id='page-content', children=[]), 
 ])
 
+
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/page1':
-        return page1.layout
-    if pathname == '/page2':
-        return page2.layout
+    if pathname == '/genero':
+        return genero.layout
+    if pathname == '/area':
+        return area.layout
     else:
         return "404 Page Error! Please choose a link"
 
