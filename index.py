@@ -12,6 +12,8 @@ cb_genero.callback_genero(app)
 cb_area.callback_area(app)
 cb_questoes.callback_questoes(app)
 
+server = app.server
+
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     nav, 
